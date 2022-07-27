@@ -9,16 +9,31 @@ export default class CSDApi {
 
     private _client: Client;
 
+    /**
+     * CSDApi Constructor
+     * @param {ClientConfig} config
+     * @return {CSDApi}
+     */
     constructor(config: ClientConfig) {
         this._client = new Client(config)
     }
 
+    /**
+     * Get CSD by RFC
+     * @param {string} rfc
+     * @return {any}
+     */
     public async Get(rfc: string): Promise<any> {
         return this._client.request(<RequestConfig>{
             path: `api-lite/csds/${rfc}`,
         })
     }
 
+    /**
+     * Get CSD by params
+     * @param {any} params
+     * @return {any}
+     */
     public async List(params: any = {}): Promise<any> {
 
         let path = `api-lite/csds`;
@@ -31,22 +46,38 @@ export default class CSDApi {
         });
     }
 
+    /**
+     * Create CSD
+     * @param {CSD} csd
+     * @return {any}
+     */
     public async Create(csd: CSD): Promise<any> {
         return this._client.request(<RequestConfig>{
             type: HTTP_REQUEST_TYPE.POST,
             path: `api-lite/csds`,
-            data: JSON.stringify(csd.json()),
+            data: csd.json(),
         });
     }
 
+    /**
+     * Update CSD by RFC
+     * @param {string} rfc
+     * @param {CSD} csd
+     * @return {any}
+     */
     public async Update(rfc: string, csd: CSD): Promise<any> {
         return this._client.request(<RequestConfig>{
             type: HTTP_REQUEST_TYPE.PUT,
             path: `api-lite/csds/${rfc}`,
-            data: JSON.stringify(csd.json()),
+            data: csd.json(),
         });
     }
 
+    /**
+     * Remove CSD by RFC
+     * @param {string} rfc
+     * @return {any}
+     */
     public async Remove(rfc: string): Promise<any> {
         return this._client.request(<RequestConfig>{
             type: HTTP_REQUEST_TYPE.DELETE,

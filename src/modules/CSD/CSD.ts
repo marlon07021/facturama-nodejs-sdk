@@ -13,6 +13,10 @@ export default class CSD implements Serializable {
         this.PrivateKeyPassword = csd.PrivateKeyPassword;
     }
 
+    /**
+     * Returns a JSON representation of the class
+     * @return {any}
+     */
     public json(): any {
         return {
             Rfc: this.Rfc,

@@ -1,3 +1,7 @@
+/**
+ * CDFI v4
+ */
+
 import Issuer from "./Issuer";
 import Receiver from "./Receiver";
 import Item from "./Item";
@@ -30,6 +34,10 @@ export class CFDIv4 implements Serializable {
         this.Items = cfdi.Items;
     }
 
+    /**
+     * Returns a JSON representation of the class
+     * @return {any}
+     */
     public json(): any {
         return {
             Serie: this.Serie,

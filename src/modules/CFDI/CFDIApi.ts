@@ -9,16 +9,31 @@ export default class CFDIApi {
 
     private _client: Client;
 
+    /**
+     * CFDIApi Constructor
+     * @param {ClientConfig} config
+     * @return {CFDIApi}
+     */
     constructor(config: ClientConfig) {
         this._client = new Client(config)
     }
 
+    /**
+     * Get CFDI by id
+     * @param {string} id
+     * @return {any}
+     */
     public async Get(id: string): Promise<any> {
         return this._client.request(<RequestConfig>{
             path: `api-lite/cfdis/${id}`,
         })
     }
 
+    /**
+     * List CFDI by params
+     * @param {any} params
+     * @return {any}
+     */
     public async List(params: any = {}): Promise<any> {
 
         let path = `api-lite/cfdis`;
@@ -31,14 +46,24 @@ export default class CFDIApi {
         });
     }
 
+    /**
+     * Create CFDI
+     * @param {CFDIv4} cfdIv4
+     * @return {any}
+     */
     public async Create(cfdIv4: CFDIv4): Promise<any> {
         return this._client.request(<RequestConfig>{
             type: HTTP_REQUEST_TYPE.POST,
             path: `api-lite/2/cfdis`,
-            data: JSON.stringify(cfdIv4.json()),
+            data: cfdIv4.json(),
         });
     }
 
+    /**
+     * Send CFDI
+     * @param {any} params
+     * @return {any}
+     */
     public async Send(params?: any): Promise<any> {
         let path = `cfdi`;
 
@@ -51,6 +76,11 @@ export default class CFDIApi {
         });
     }
 
+    /**
+     * Cancel CFDI
+     * @param {any} params
+     * @return {any}
+     */
     public async Cancel(params?: any): Promise<any> {
         let path = `api-lite/cfdis`;
 
@@ -63,12 +93,27 @@ export default class CFDIApi {
         });
     }
 
+    /**
+     * Download CFDI
+     * @param {string} format
+     * @param {string} type
+     * @param {string} id
+     * @return {any}
+     */
+
     public async Download(format: string, type: string, id: string): Promise<any> {
         return this._client.request(<RequestConfig>{
             path: `cfdi/${format}/${type}/${id}`,
         })
     }
 
+    /**
+     * Acuse CFDI
+     * @param {string} format
+     * @param {string} type
+     * @param {string} id
+     * @return {any}
+     */
     public async Acuse(format: string, type: string, id: string): Promise<any> {
         return this._client.request(<RequestConfig>{
             path: `acuse/${format}/${type}/${id}`,

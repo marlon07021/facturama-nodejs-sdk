@@ -3,14 +3,28 @@ import {RequestConfig} from "./RequestConfig";
 import {DELETE, GET, POST, PUT} from "../util/http";
 import {HTTP_REQUEST_TYPE} from "./HttpRequestType";
 
+/**
+ * Major proxy wrapper for HTTP calls
+ */
 export class Client {
 
     private _config: ClientConfig;
 
+    /**
+     * Constructor
+     * @param {ClientConfig} config
+     * @return {Client}
+     */
     constructor(config: ClientConfig) {
         this._config = config;
 
     }
+
+    /**
+     * Performs and HTTP request with configuration
+     * @param {RequestConfig} request
+     * @return {any}
+     */
 
     public async request(request: RequestConfig): Promise<any> {
         try {

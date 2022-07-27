@@ -16,6 +16,11 @@ export default class FacturamaSDK {
 
     private loggedIn: boolean = false;
 
+    /**
+     * Get CFDIApi instance if logged in or Error if not
+     * @return {CFDIApi}
+     * @return {Error}
+     */
     public get CDFI(): CFDIApi {
         if ( this.loggedIn && this._CDFI )
             return this._CDFI;
@@ -24,6 +29,11 @@ export default class FacturamaSDK {
 
     };
 
+    /**
+     * Get CSDApi instance if logged in or Error if not
+     * @return {CSDApi}
+     * @return {Error}
+     */
     public get CSD(): CSDApi {
         if ( this.loggedIn && this._CSD )
             return this._CSD;
@@ -32,6 +42,11 @@ export default class FacturamaSDK {
 
     };
 
+    /**
+     * Get CatalogsApi instance if logged in or Error if not
+     * @return {CatalogsApi}
+     * @return {Error}
+     */
     public get Catalogs(): CatalogsApi {
         if ( this.loggedIn && this._Catalogs )
             return this._Catalogs;
@@ -41,6 +56,12 @@ export default class FacturamaSDK {
     };
 
 
+    /**
+     * Create new instance of the SDK with production, sandbox or custom API endpoint
+     * @param {boolean} production
+     * @param {string?} apiUrl
+     * @return {Client}
+     */
     constructor(production: boolean = false, apiUrl?: string) {
         if (apiUrl) {
             this._apiUrl = apiUrl;
@@ -52,7 +73,13 @@ export default class FacturamaSDK {
         }
     }
 
-    public login(username: string, password: string) {
+    /**
+     * Initializes the SDK for client user credentials and allows to use the API proxies
+     * @param {string} username
+     * @param {string} password
+     * @return {FacturamaSDK}
+     */
+    public login(username: string, password: string): FacturamaSDK{
         const authorization = encodeBase64(username + ':' + password);
         const clientConfig = <ClientConfig>{
             url: this._apiUrl,
@@ -63,6 +90,8 @@ export default class FacturamaSDK {
         this._Catalogs = new CatalogsApi(clientConfig);
 
         this.loggedIn = true;
+
+        return this;
     }
 
 }
