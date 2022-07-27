@@ -1,4 +1,4 @@
-import {encodeParams} from "../util/qs";
+import {encodeParams} from "../../util/qs";
 
 test('qs', () => {
    const queryObject = {

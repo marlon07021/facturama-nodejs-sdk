@@ -1,6 +1,5 @@
 import {Client} from "../../client/Client";
 import {ClientConfig} from "../../client/ClientConfig";
-import {RequestConfig} from "../../client/RequestConfig";
 import {encodeParams} from "../../util/qs";
 import {CFDIv4} from "./CFDI.v4";
 import {HTTP_REQUEST_TYPE} from "../../client/HttpRequestType";

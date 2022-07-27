@@ -1,7 +1,21 @@
 {
+  "roots": [
+    "<rootDir>/src"
+  ],
   "transform": {
     "^.+\\.(t|j)sx?$": "ts-jest"
   },
   "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+  "collectCoverageFrom": [
+    "**/*.{js,jsx,ts,tsx}",
+    "!**/*.d.ts",
+    "!**/node_modules/**"
+  ],
+  "globals": {
+    "ts-jest": {
+      "tsconfig": "tsconfig.json"
+    }
+  },
+
   "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
 }

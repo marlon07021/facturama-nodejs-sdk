@@ -1,4 +1,4 @@
-import {encodeBase64, decodeBase64} from "../util/base64";
+import {encodeBase64, decodeBase64} from "../../util/base64";
 
 test('base64', () => {
     const testString = 'abc';
