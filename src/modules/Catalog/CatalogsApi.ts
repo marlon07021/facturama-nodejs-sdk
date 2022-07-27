@@ -2,7 +2,7 @@ import {Client} from "../../client/Client";
 import {ClientConfig} from "../../client/ClientConfig";
 import {RequestConfig} from "../../client/RequestConfig";
 
-export default class CatalogApi {
+export default class CatalogsApi {
 
     private _client: Client;
 
