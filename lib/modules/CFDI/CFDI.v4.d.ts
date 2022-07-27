@@ -1,3 +1,6 @@
+/**
+ * CDFI v4
+ */
 import Issuer from "./Issuer";
 import Receiver from "./Receiver";
 import Item from "./Item";
@@ -15,5 +18,9 @@ export declare class CFDIv4 implements Serializable {
     Receiver: Receiver;
     Items: Item[];
     constructor(cfdi: any);
+    /**
+     * Returns a JSON representation of the class
+     * @return {any}
+     */
     json(): any;
 }

@@ -7,9 +7,36 @@ export default class FacturamaSDK {
     private _CSD;
     private _Catalogs;
     private loggedIn;
+    /**
+     * Get CFDIApi instance if logged in or Error if not
+     * @return {CFDIApi}
+     * @return {Error}
+     */
     get CDFI(): CFDIApi;
+    /**
+     * Get CSDApi instance if logged in or Error if not
+     * @return {CSDApi}
+     * @return {Error}
+     */
     get CSD(): CSDApi;
+    /**
+     * Get CatalogsApi instance if logged in or Error if not
+     * @return {CatalogsApi}
+     * @return {Error}
+     */
     get Catalogs(): CatalogsApi;
+    /**
+     * Create new instance of the SDK with production, sandbox or custom API endpoint
+     * @param {boolean} production
+     * @param {string?} apiUrl
+     * @return {Client}
+     */
     constructor(production?: boolean, apiUrl?: string);
-    login(username: string, password: string): void;
+    /**
+     * Initializes the SDK for client user credentials and allows to use the API proxies
+     * @param {string} username
+     * @param {string} password
+     * @return {FacturamaSDK}
+     */
+    login(username: string, password: string): FacturamaSDK;
 }
