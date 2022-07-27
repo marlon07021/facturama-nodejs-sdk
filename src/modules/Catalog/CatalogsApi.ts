@@ -21,7 +21,7 @@ export default class CatalogsApi {
      * @return {any}
      */
     public async States(country: string): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `catalogs/municipalities?countryCode=${country}`,
         });
     }
@@ -32,7 +32,7 @@ export default class CatalogsApi {
      * @return {any}
      */
     public async Municipalities(state: string): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `catalogs/municipalities?stateCode=${state}`
         });
     }
@@ -44,7 +44,7 @@ export default class CatalogsApi {
      */
 
     public async Localities(state: string): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `catalogs/localities?stateCode=${state}`
         });
     }
@@ -55,7 +55,7 @@ export default class CatalogsApi {
      * @return {any}
      */
     public async Neighborhoods(postalCode: string): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `catalogs/neighborhoods?postalCode=${postalCode}`
         });
     }
@@ -66,7 +66,7 @@ export default class CatalogsApi {
      * @return {any}
      */
     public async ProductsOrServices(keyword: string): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `catalogs/ProductsOrServices?keyword=${keyword}`
         });
     }
@@ -77,7 +77,7 @@ export default class CatalogsApi {
      * @return {any}
      */
     public async PostalCodes(keyword: string): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `catalogs/PostalCodes?keyword=${keyword}`
         });
     }
@@ -88,7 +88,7 @@ export default class CatalogsApi {
      * @return {any}
      */
     public async Units(): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `catalogs/Units`
         });
     }
@@ -98,7 +98,7 @@ export default class CatalogsApi {
      * @return {any}
      */
     public async Currencies(): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `catalogs/Currencies`
         });
     }
@@ -108,7 +108,7 @@ export default class CatalogsApi {
      * @return {any}
      */
     public async PaymentForms(): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `catalogs/PaymentForms`
         });
     }
@@ -118,7 +118,7 @@ export default class CatalogsApi {
      * @return {any}
      */
     public async PaymentMethods(): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `catalogs/PaymentMethods`
         });
     }
@@ -128,7 +128,7 @@ export default class CatalogsApi {
      * @return {any}
      */
     public async FederalTaxes(): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `catalogs/FederalTaxes`
         });
     }
@@ -138,7 +138,7 @@ export default class CatalogsApi {
      * @return {any}
      */
     public async FiscalRegimens(): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `catalogs/FiscalRegimens`
         });
     }
@@ -148,7 +148,7 @@ export default class CatalogsApi {
      * @return {any}
      */
     public async CfdiTypes(): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `catalogs/CfdiTypes`
         });
     }
@@ -158,7 +158,7 @@ export default class CatalogsApi {
      * @return {any}
      */
     public async RelationTypes(): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `catalogs/RelationTypes`
         });
     }
@@ -169,7 +169,7 @@ export default class CatalogsApi {
      * @return {any}
      */
     public async CfdiUses(keyword: string): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `catalogs/CfdiUses?keyword=${keyword}`
         });
     }

@@ -24,7 +24,7 @@ export default class CFDIApi {
      * @return {any}
      */
     public async Get(id: string): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `api-lite/cfdis/${id}`,
         })
     }
@@ -41,7 +41,7 @@ export default class CFDIApi {
         if (params)
             path = `api-lite/cfdis?${encodeParams(params)}`;
 
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path
         });
     }
@@ -52,7 +52,7 @@ export default class CFDIApi {
      * @return {any}
      */
     public async Create(cfdIv4: CFDIv4): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             type: HTTP_REQUEST_TYPE.POST,
             path: `api-lite/2/cfdis`,
             data: cfdIv4.json(),
@@ -70,7 +70,7 @@ export default class CFDIApi {
         if (params)
             path = `cfdi?${encodeParams(params)}`;
 
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             type: HTTP_REQUEST_TYPE.POST,
             path
         });
@@ -87,7 +87,7 @@ export default class CFDIApi {
         if (params)
             path = `api-lite/cfdis?${encodeParams(params)}`;
 
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             type: HTTP_REQUEST_TYPE.DELETE,
             path
         });
@@ -102,7 +102,7 @@ export default class CFDIApi {
      */
 
     public async Download(format: string, type: string, id: string): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `cfdi/${format}/${type}/${id}`,
         })
     }
@@ -115,7 +115,7 @@ export default class CFDIApi {
      * @return {any}
      */
     public async Acuse(format: string, type: string, id: string): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `acuse/${format}/${type}/${id}`,
         })
     }

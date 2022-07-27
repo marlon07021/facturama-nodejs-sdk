@@ -24,7 +24,7 @@ export default class CSDApi {
      * @return {any}
      */
     public async Get(rfc: string): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path: `api-lite/csds/${rfc}`,
         })
     }
@@ -41,7 +41,7 @@ export default class CSDApi {
         if (params)
             path = `api-lite/csds?${encodeParams(params)}`;
 
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             path
         });
     }
@@ -52,7 +52,7 @@ export default class CSDApi {
      * @return {any}
      */
     public async Create(csd: CSD): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             type: HTTP_REQUEST_TYPE.POST,
             path: `api-lite/csds`,
             data: csd.json(),
@@ -66,7 +66,7 @@ export default class CSDApi {
      * @return {any}
      */
     public async Update(rfc: string, csd: CSD): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             type: HTTP_REQUEST_TYPE.PUT,
             path: `api-lite/csds/${rfc}`,
             data: csd.json(),
@@ -79,7 +79,7 @@ export default class CSDApi {
      * @return {any}
      */
     public async Remove(rfc: string): Promise<any> {
-        return this._client.request(<RequestConfig>{
+        return this._client.request({
             type: HTTP_REQUEST_TYPE.DELETE,
             path: `api-lite/csds/${rfc}`
         });

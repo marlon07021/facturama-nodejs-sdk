@@ -81,7 +81,7 @@ export default class FacturamaSDK {
      */
     public login(username: string, password: string): FacturamaSDK{
         const authorization = encodeBase64(username + ':' + password);
-        const clientConfig = <ClientConfig>{
+        const clientConfig = {
             url: this._apiUrl,
             authorization: 'Basic ' + authorization
         };
