@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+import axios from 'axios';
 
 /**
  * Call a GET http request
@@ -14,12 +14,13 @@ export const GET = async (
     },
     signal?: AbortSignal,
 ) => {
-    const response = await fetch(url, {
+    const response = await axios({
+        url,
         method: 'GET',
         headers,
-        signal,
+        signal
     });
-    return response.json();
+    return response.data;
 };
 
 /**
@@ -38,13 +39,14 @@ export const POST = async (
     },
     signal?: AbortSignal,
 ) => {
-    const response = await fetch(url, {
+    const response = await axios({
+        url,
         method: 'POST',
         headers,
-        body: JSON.stringify(body),
+        data: JSON.stringify(body),
         signal,
     });
-    return response.json();
+    return response.data;
 };
 
 /**
@@ -63,13 +65,14 @@ export const PUT = async (
     },
     signal?: AbortSignal,
 ) => {
-    const response = await fetch(url, {
+    const response = await axios({
+        url,
         method: 'PUT',
         headers,
-        body: JSON.stringify(body),
+        data: JSON.stringify(body),
         signal,
     });
-    return response.json();
+    return response.data;
 };
 
 /**
@@ -88,12 +91,13 @@ export const DELETE = async (
     },
     signal?: AbortSignal,
 ) => {
-    const response = await fetch(url, {
+    const response = await axios( {
+        url,
         method: 'DELETE',
         headers,
-        body: JSON.stringify(body),
+        data: JSON.stringify(body),
         signal,
     });
-    return response.json();
+    return response.data;
 };
 

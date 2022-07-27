@@ -4,6 +4,7 @@
   "description": "Facturama SDK for Node.js",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "type": "module",
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
@@ -13,7 +14,9 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
-    "test": "jest --config jestconfig.json"
+    "test": "jest --config jestconfig.json",
+    "test:coverage": "jest --config jestconfig.json --coverage",
+    "test:watch": "jest --config jestconfig.json --watch"
   },
   "keywords": [
     "facturama",
@@ -32,6 +35,7 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "node-fetch": "^3.2.9"
   },
   "files": [

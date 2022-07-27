@@ -5,6 +5,7 @@ import CatalogsApi from "./modules/Catalog/CatalogsApi";
 import {Client} from "./client/Client";
 import {encodeBase64} from "./util/base64";
 import {ClientConfig} from "./client/ClientConfig";
+import {NotInitializedError} from "./abstractions/NotInitializedError";
 
 export default class FacturamaSDK {
 
@@ -19,39 +20,39 @@ export default class FacturamaSDK {
     /**
      * Get CFDIApi instance if logged in or Error if not
      * @return {CFDIApi}
-     * @return {Error}
+     * @return {NotInitializedError}
      */
     public get CDFI(): CFDIApi {
         if ( this.loggedIn && this._CDFI )
             return this._CDFI;
         else
-            throw Error('You need to call login method with username and password first');
+            throw new NotInitializedError();
 
     };
 
     /**
      * Get CSDApi instance if logged in or Error if not
      * @return {CSDApi}
-     * @return {Error}
+     * @return {NotInitializedError}
      */
     public get CSD(): CSDApi {
         if ( this.loggedIn && this._CSD )
             return this._CSD;
         else
-            throw Error('You need to call login method with username and password first');
+            throw new NotInitializedError();
 
     };
 
     /**
      * Get CatalogsApi instance if logged in or Error if not
      * @return {CatalogsApi}
-     * @return {Error}
+     * @return {NotInitializedError}
      */
     public get Catalogs(): CatalogsApi {
         if ( this.loggedIn && this._Catalogs )
             return this._Catalogs;
         else
-            throw Error('You need to call login method with username and password first');
+            throw new NotInitializedError();
 
     };
 
