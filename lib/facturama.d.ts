@@ -8,6 +8,11 @@ export default class FacturamaSDK {
     private _Catalogs;
     private loggedIn;
     /**
+     * Get API url
+     * @return {string} ApiUrl
+     */
+    get ApiUrl(): string;
+    /**
      * Get CFDIApi instance if logged in or Error if not
      * @return {CFDIApi}
      * @return {NotInitializedError}

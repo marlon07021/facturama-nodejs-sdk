@@ -1,5 +1,5 @@
 import { ClientConfig } from "../../client/ClientConfig";
-import CSD from "./CSD";
+import { CSDInterface } from "../../abstractions/CSD.interface";
 export default class CSDApi {
     private _client;
     /**
@@ -22,17 +22,17 @@ export default class CSDApi {
     List(params?: any): Promise<any>;
     /**
      * Create CSD
-     * @param {CSD} csd
+     * @param {CSDInterface} csd
      * @return {any}
      */
-    Create(csd: CSD): Promise<any>;
+    Create(csd: CSDInterface): Promise<any>;
     /**
      * Update CSD by RFC
      * @param {string} rfc
      * @param {CSD} csd
      * @return {any}
      */
-    Update(rfc: string, csd: CSD): Promise<any>;
+    Update(rfc: string, csd: CSDInterface): Promise<any>;
     /**
      * Remove CSD by RFC
      * @param {string} rfc
