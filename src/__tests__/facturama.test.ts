@@ -2,7 +2,7 @@ import {FacturamaSDK} from "../index";
 import {NotInitializedError} from "../util/NotInitializedError";
 
 describe('facturama sdk test', () => {
-    it('should throw error if not login for CDFI', () => {
+    test('throw error if not login for CDFI', () => {
         const sdk = new FacturamaSDK(false);
         try {
             sdk.CDFI;
@@ -12,7 +12,7 @@ describe('facturama sdk test', () => {
         }
 
     });
-    it('should throw error if not login for CSD', () => {
+    test('throw error if not login for CSD', () => {
         const sdk = new FacturamaSDK(false);
         try {
             sdk.CSD;
@@ -22,7 +22,7 @@ describe('facturama sdk test', () => {
         }
 
     });
-    it('should throw error if not login for Catalogs', () => {
+    test('throw error if not login for Catalogs', () => {
         const sdk = new FacturamaSDK(false);
         try {
             sdk.Catalogs;

@@ -13,14 +13,11 @@ export const GET = async (
         'Content-Type': 'application/json',
     },
     signal?: AbortSignal,
-) => {
-    const response = await axios({
-        url,
-        method: 'GET',
+): Promise<any> => {
+    return axios.get(url,{
         headers,
         signal
     });
-    return response.data;
 };
 
 /**
@@ -39,14 +36,10 @@ export const POST = async (
     },
     signal?: AbortSignal,
 ) => {
-    const response = await axios({
-        url,
-        method: 'POST',
+    return axios.post(url,body,{
         headers,
-        data: JSON.stringify(body),
         signal,
     });
-    return response.data;
 };
 
 /**
@@ -65,14 +58,10 @@ export const PUT = async (
     },
     signal?: AbortSignal,
 ) => {
-    const response = await axios({
-        url,
-        method: 'PUT',
+    return  axios.put(url,body,{
         headers,
-        data: JSON.stringify(body),
         signal,
     });
-    return response.data;
 };
 
 /**
@@ -91,13 +80,10 @@ export const DELETE = async (
     },
     signal?: AbortSignal,
 ) => {
-    const response = await axios( {
-        url,
-        method: 'DELETE',
+    return axios.delete(url, {
         headers,
-        data: JSON.stringify(body),
+        data: body,
         signal,
     });
-    return response.data;
 };
 

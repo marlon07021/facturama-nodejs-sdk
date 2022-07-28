@@ -17,6 +17,14 @@ export default class FacturamaSDK {
     private loggedIn: boolean = false;
 
     /**
+     * Get API url
+     * @return {string} ApiUrl
+     */
+    public get ApiUrl() {
+        return this._apiUrl;
+    }
+
+    /**
      * Get CFDIApi instance if logged in or Error if not
      * @return {CFDIApi}
      * @return {NotInitializedError}

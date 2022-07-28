@@ -6,8 +6,9 @@ import Issuer from "./Issuer";
 import Receiver from "./Receiver";
 import Item from "./Item";
 import Serializable from "../../abstractions/Serializable";
+import {CFDIv4Interface} from "../../abstractions/CFDI.v4.interface";
 
-export class CFDIv4 implements Serializable {
+export class CFDIv4 implements CFDIv4Interface{
     public Serie: string;
     public Currency: string;
     public ExpeditionPlace: string;

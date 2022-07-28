@@ -1,6 +1,7 @@
 import Serializable from "../../abstractions/Serializable";
+import {CSDInterface} from "../../abstractions/CSD.interface";
 
-export default class CSD implements Serializable {
+export default class CSD implements CSDInterface {
     public Rfc: string;
     public Certificate: string;
     public PrivateKey: string;
