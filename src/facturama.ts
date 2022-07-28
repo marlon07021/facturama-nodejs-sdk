@@ -4,8 +4,7 @@ import CSDApi from "./modules/CSD/CSDApi";
 import CatalogsApi from "./modules/Catalog/CatalogsApi";
 import {Client} from "./client/Client";
 import {encodeBase64} from "./util/base64";
-import {ClientConfig} from "./client/ClientConfig";
-import {NotInitializedError} from "./abstractions/NotInitializedError";
+import {NotInitializedError} from "./util/NotInitializedError";
 
 export default class FacturamaSDK {
 

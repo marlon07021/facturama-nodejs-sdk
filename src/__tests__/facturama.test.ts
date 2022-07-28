@@ -1,5 +1,5 @@
 import {FacturamaSDK} from "../index";
-import {NotInitializedError} from "../abstractions/NotInitializedError";
+import {NotInitializedError} from "../util/NotInitializedError";
 
 describe('facturama sdk test', () => {
     it('should throw error if not login for CDFI', () => {
