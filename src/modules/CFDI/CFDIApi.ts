@@ -33,7 +33,7 @@ export default class CFDIApi {
      * @param {any} params
      * @return {any}
      */
-    public async List(params: any = {}): Promise<any> {
+    public async List(params?: any): Promise<any> {
 
         let path = `api-lite/cfdis`;
 

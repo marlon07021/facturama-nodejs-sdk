@@ -2,13 +2,13 @@ Facturama SDK
 =============
 
 - [X] HTTP Client  
-- [ ] HTTP Client Tests
+- [X] HTTP Client Tests
 - [X] HTTP Client Documentation
 - [X] CFDI v4 Module
 - [ ] CFDI v4 Module Tests
 - [X] CFDI v4 Module Documentation
 - [X] CSD Module
-- [ ] CSD Module Tests
+- [X] CSD Module Tests
 - [X] CSD Module Documentation
 - [X] SAT Catalogs Module
 - [ ] SAT Catalogs Module Tests
