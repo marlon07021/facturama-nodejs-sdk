@@ -1,6 +1,6 @@
-import Serializable from "./Serializable";
+import {ISerializable} from "../ISerializable";
 
-export interface CSDInterface extends Serializable{
+export interface ICSD extends ISerializable{
     Rfc: string;
     Certificate: string;
     PrivateKey: string;

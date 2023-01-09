@@ -1,10 +1,10 @@
 /**
  * CDFI v4
  */
-import {Issuer, Item, Receiver} from "../modules/CFDI";
-import Serializable from "./Serializable";
+import {Issuer, Item, Receiver} from "../../modules/CFDI";
+import Serializable from "../ISerializable";
 
-export interface CFDIv4Interface extends Serializable{
+export interface ICFDIv4 extends Serializable{
     Serie: string;
     Currency: string;
     ExpeditionPlace: string;

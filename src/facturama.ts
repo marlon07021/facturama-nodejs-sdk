@@ -1,5 +1,6 @@
 import {Config} from "./config";
 import {CFDIApi} from "./modules/CFDI";
+import {RetentionApi} from "./modules/Retenciones";
 import CSDApi from "./modules/CSD/CSDApi";
 import CatalogsApi from "./modules/Catalog/CatalogsApi";
 import {Client} from "./client/Client";
@@ -11,6 +12,7 @@ export default class FacturamaSDK {
     private _apiUrl: string;
 
     private _CDFI: CFDIApi | null = null;
+    private _Retentions: RetentionApi | null = null;
     private _CSD: CSDApi | null = null;
     private _Catalogs: CatalogsApi | null = null;
 
@@ -32,6 +34,19 @@ export default class FacturamaSDK {
     public get CDFI(): CFDIApi {
         if ( this.loggedIn && this._CDFI )
             return this._CDFI;
+        else
+            throw new NotInitializedError();
+
+    };
+
+    /**
+     * Get RetentionApi instance if logged in or Error if not
+     * @return {RetentionApi}
+     * @return {NotInitializedError}
+     */
+    public get Retenciones(): RetentionApi {
+        if ( this.loggedIn && this._Retentions )
+            return this._Retentions;
         else
             throw new NotInitializedError();
 
@@ -95,6 +110,7 @@ export default class FacturamaSDK {
         };
         this._CDFI = new CFDIApi(clientConfig);
         this._CSD = new CSDApi(clientConfig);
+        this._Retentions = new RetentionApi(clientConfig);
         this._Catalogs = new CatalogsApi(clientConfig);
 
         this.loggedIn = true;

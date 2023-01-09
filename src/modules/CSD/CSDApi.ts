@@ -1,10 +1,8 @@
 import {Client} from "../../client/Client";
 import {ClientConfig} from "../../client/ClientConfig";
-import {RequestConfig} from "../../client/RequestConfig";
 import {encodeParams} from "../../util/qs";
 import {HTTP_REQUEST_TYPE} from "../../client/HttpRequestType";
-import CSD from "./CSD";
-import {CSDInterface} from "../../abstractions/CSD.interface";
+import {ICSD} from "../../abstractions";
 
 export default class CSDApi {
 
@@ -52,7 +50,7 @@ export default class CSDApi {
      * @param {CSDInterface} csd
      * @return {any}
      */
-    public async Create(csd: CSDInterface): Promise<any> {
+    public async Create(csd: ICSD): Promise<any> {
         return this._client.request({
             type: HTTP_REQUEST_TYPE.POST,
             path: `api-lite/csds`,
@@ -66,7 +64,7 @@ export default class CSDApi {
      * @param {CSD} csd
      * @return {any}
      */
-    public async Update(rfc: string, csd: CSDInterface): Promise<any> {
+    public async Update(rfc: string, csd: ICSD): Promise<any> {
         return this._client.request({
             type: HTTP_REQUEST_TYPE.PUT,
             path: `api-lite/csds/${rfc}`,

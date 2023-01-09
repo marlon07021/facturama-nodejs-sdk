@@ -1,6 +1,5 @@
 import {Client} from "../../client/Client";
 import {ClientConfig} from "../../client/ClientConfig";
-import {RequestConfig} from "../../client/RequestConfig";
 
 export default class CatalogsApi {
 

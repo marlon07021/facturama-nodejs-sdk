@@ -1,13 +1,12 @@
-import Serializable from "../../abstractions/Serializable";
-import {CSDInterface} from "../../abstractions/CSD.interface";
+import {ICSD} from "../../abstractions/csd/ICSD";
 
-export default class CSD implements CSDInterface {
+export default class CSD implements ICSD {
     public Rfc: string;
     public Certificate: string;
     public PrivateKey: string;
     public PrivateKeyPassword: string;
 
-    constructor(csd: any) {
+    constructor(csd: ICSD) {
         this.Rfc = csd.Rfc;
         this.Certificate = csd.Certificate;
         this.PrivateKey = csd.PrivateKey;

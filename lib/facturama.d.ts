@@ -1,9 +1,10 @@
-import { CFDIApi } from "./modules/CFDI";
+import { CFDIApi, RetentionApi } from "./modules/CFDI";
 import CSDApi from "./modules/CSD/CSDApi";
 import CatalogsApi from "./modules/Catalog/CatalogsApi";
 export default class FacturamaSDK {
     private _apiUrl;
     private _CDFI;
+    private _Retentions;
     private _CSD;
     private _Catalogs;
     private loggedIn;
@@ -18,6 +19,12 @@ export default class FacturamaSDK {
      * @return {NotInitializedError}
      */
     get CDFI(): CFDIApi;
+    /**
+     * Get RetentionApi instance if logged in or Error if not
+     * @return {RetentionApi}
+     * @return {NotInitializedError}
+     */
+    get Retenciones(): RetentionApi;
     /**
      * Get CSDApi instance if logged in or Error if not
      * @return {CSDApi}

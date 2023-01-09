@@ -53,7 +53,7 @@ describe('CSD module API', () => {
 
     test('create a new CSD', async () => {
 
-        const obj = new CSD({...sampleCSD});
+        const obj = new CSD(sampleCSD as any);
 
         // (axios.post as jest.Mock).mockResolvedValue(
         //     {data: sampleCSD}
@@ -74,7 +74,7 @@ describe('CSD module API', () => {
     test('update CSD', async () => {
 
         const rfc = sampleCSD.Rfc;
-        const obj = new CSD({...sampleCSD, PrivateKeyPassword: '02345678b'});
+        const obj = new CSD({...(sampleCSD as any), PrivateKeyPassword: '02345678b'});
 
         //(axios.put as jest.Mock).mockResolvedValue();
 
@@ -94,7 +94,7 @@ describe('CSD module API', () => {
     test('remove CSD', async () => {
 
         const rfc = sampleCSD.Rfc;
-        const obj = new CSD({...sampleCSD, PrivateKeyPassword: '02345678b'});
+        const obj = new CSD({...(sampleCSD as any), PrivateKeyPassword: '02345678b'});
 
         //(axios.put as jest.Mock).mockResolvedValue();
 

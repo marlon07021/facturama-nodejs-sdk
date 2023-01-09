@@ -1,7 +1,7 @@
 /**
  * HTTP Client config contract
  */
-export declare type ClientConfig = {
+export type ClientConfig = {
     url: string;
     authorization?: string;
 };
