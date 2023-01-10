@@ -3,7 +3,7 @@
  * @param {string} text
  * @return {any}
  */
-export const encodeBase64 = (text:string): string => Buffer.from(text, 'utf8').toString('base64');
+export const encodeBase64 = (text: string): string => Buffer.from(text, 'utf8').toString('base64');
 
 /**
  * Decode from base64 string to utf-8 string

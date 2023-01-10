@@ -1,5 +1,5 @@
 export default interface Issuer {
-    Rfc: string;
-    Name: string;
-    FiscalRegime: string;
+  Rfc: string;
+  Name: string;
+  FiscalRegime: string;
 }

@@ -1,4 +1,3 @@
 import RetentionApi from './RetentionApi';
 
-
-export {RetentionApi};
+export { RetentionApi };

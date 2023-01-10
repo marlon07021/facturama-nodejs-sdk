@@ -1,8 +1,7 @@
-import {ISerializable} from "../ISerializable";
-
+import { ISerializable } from '../ISerializable';
 
 export interface IPeriodo extends ISerializable {
-    MesIni: number;
-    MesFin: number;
-    Ejerc: number;
+  MesIni: number;
+  MesFin: number;
+  Ejerc: number;
 }

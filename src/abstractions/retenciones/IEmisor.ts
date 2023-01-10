@@ -1,8 +1,7 @@
-import {ISerializable} from "../ISerializable";
-
+import { ISerializable } from '../ISerializable';
 
 export interface IEmisor extends ISerializable {
-    RfcEmisor: string;
-    NomDenRazSocE: string;
-    CurpE: string;
+  RfcEmisor: string;
+  NomDenRazSocE: string;
+  CurpE: string;
 }
