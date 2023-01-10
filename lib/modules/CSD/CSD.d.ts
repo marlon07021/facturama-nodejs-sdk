@@ -1,10 +1,10 @@
-import { CSDInterface } from "../../abstractions/CSD.interface";
-export default class CSD implements CSDInterface {
+import { ICSD } from "../../abstractions/csd/ICSD";
+export default class CSD implements ICSD {
     Rfc: string;
     Certificate: string;
     PrivateKey: string;
     PrivateKeyPassword: string;
-    constructor(csd: any);
+    constructor(csd: ICSD);
     /**
      * Returns a JSON representation of the class
      * @return {any}

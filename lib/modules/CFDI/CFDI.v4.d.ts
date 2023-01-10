@@ -4,8 +4,8 @@
 import Issuer from "./Issuer";
 import Receiver from "./Receiver";
 import Item from "./Item";
-import { CFDIv4Interface } from "../../abstractions/CFDI.v4.interface";
-export declare class CFDIv4 implements CFDIv4Interface {
+import { ICFDIv4 } from "../../abstractions/cfdi/ICFDI4";
+export declare class CFDIv4 implements ICFDIv4 {
     Serie: string;
     Currency: string;
     ExpeditionPlace: string;
