@@ -1,5 +1,7 @@
 import { IServicio } from '../../../abstractions';
-import { ComisionDelServicio, ContribucionGubernamental, ImpuestosTrasladadosdelServicio } from './';
+import { ComisionDelServicio } from './ComisionDelServicio';
+import { ContribucionGubernamental } from './ContribucionGubernamental';
+import { ImpuestosTrasladadosdelServicio } from './ImpuestosTrasladadosdelServicio';
 export declare class Servicio implements IServicio {
     ComisionDelServicio: ComisionDelServicio;
     ContribucionGubernamental: ContribucionGubernamental;

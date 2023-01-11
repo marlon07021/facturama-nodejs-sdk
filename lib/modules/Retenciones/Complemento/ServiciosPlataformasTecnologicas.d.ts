@@ -1,5 +1,5 @@
 import { IServiciosPlataformasTecnologicas } from '../../../abstractions';
-import { Servicio } from './';
+import { Servicio } from './Servicio';
 export declare class ServiciosPlataformasTecnologicas implements IServiciosPlataformasTecnologicas {
     DifIvaEntregadoPrestServ: number;
     MonTotalContribucionGubernamental: number;

@@ -4,7 +4,7 @@ import { Emisor } from './Emisor';
 import { Periodo } from './Periodo';
 import { Receptor } from './Receptor';
 import { Totales } from './Totales';
-export default class Retencion implements IRetencion {
+export declare class Retencion implements IRetencion {
     CadenaOriginal: string;
     Complemento: Complemento;
     CveRetenc: string;
