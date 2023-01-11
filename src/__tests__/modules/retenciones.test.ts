@@ -1,7 +1,6 @@
 import FacturamaSDK from '../../facturama';
 import axios from 'axios';
 import Retencion from '../../modules/Retenciones/Retencion';
-import { IRetencion } from '../../abstractions';
 
 const sampleRetencion = {
   FolioInt: 'sample string 1',

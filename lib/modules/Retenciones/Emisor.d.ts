@@ -1,5 +1,5 @@
 import { IEmisor } from '../../abstractions';
-export default class Emisor implements IEmisor {
+export declare class Emisor implements IEmisor {
     RfcEmisor: string;
     NomDenRazSocE: string;
     CurpE: string;

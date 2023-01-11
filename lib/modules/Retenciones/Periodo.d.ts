@@ -1,5 +1,5 @@
 import { IPeriodo } from '../../abstractions';
-export default class Periodo implements IPeriodo {
+export declare class Periodo implements IPeriodo {
     Ejerc: number;
     MesFin: number;
     MesIni: number;
