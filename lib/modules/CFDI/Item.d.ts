@@ -1,4 +1,4 @@
-import Tax from "./Tax";
+import Tax from './Tax';
 export default interface Item {
     ProductCode: string;
     IdentificationNumber: string;

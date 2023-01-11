@@ -1,4 +1,4 @@
-import { ISerializable } from "../ISerializable";
+import { ISerializable } from '../ISerializable';
 export interface IImpuestosTrasladadosdelServicio extends ISerializable {
     Base: number;
     Impuesto: string;

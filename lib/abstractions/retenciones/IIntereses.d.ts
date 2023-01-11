@@ -1,4 +1,4 @@
-import { ISerializable } from "../ISerializable";
+import { ISerializable } from '../ISerializable';
 export interface IIntereses extends ISerializable {
     Version: string;
     SistFinanciero: number;

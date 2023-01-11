@@ -1,4 +1,4 @@
-import { IImpuestosTrasladadosdelServicio } from "../../../abstractions";
+import { IImpuestosTrasladadosdelServicio } from '../../../abstractions';
 export declare class ImpuestosTrasladadosdelServicio implements IImpuestosTrasladadosdelServicio {
     Base: number;
     Importe: number;

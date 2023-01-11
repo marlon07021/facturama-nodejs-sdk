@@ -1,4 +1,4 @@
-import { ThrownError } from "../abstractions/ThrownError";
+import { ThrownError } from '../abstractions/ThrownError';
 export declare class NotInitializedError extends ThrownError {
     constructor();
 }

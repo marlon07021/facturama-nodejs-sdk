@@ -1,4 +1,4 @@
-import { IServiciosPlataformasTecnologicas } from "../../../abstractions";
+import { IServiciosPlataformasTecnologicas } from '../../../abstractions';
 import { Servicio } from './';
 export declare class ServiciosPlataformasTecnologicas implements IServiciosPlataformasTecnologicas {
     DifIvaEntregadoPrestServ: number;

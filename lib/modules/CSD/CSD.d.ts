@@ -1,4 +1,4 @@
-import { ICSD } from "../../abstractions/csd/ICSD";
+import { ICSD } from '../../abstractions/csd/ICSD';
 export default class CSD implements ICSD {
     Rfc: string;
     Certificate: string;

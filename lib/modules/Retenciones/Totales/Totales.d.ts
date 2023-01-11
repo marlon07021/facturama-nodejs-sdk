@@ -1,4 +1,4 @@
-import { IImpRetenidos, ITotales } from "../../../abstractions";
+import { IImpRetenidos, ITotales } from '../../../abstractions';
 export declare class Totales implements ITotales {
     MontoTotGrav: number;
     ImpRetenidos: IImpRetenidos[];

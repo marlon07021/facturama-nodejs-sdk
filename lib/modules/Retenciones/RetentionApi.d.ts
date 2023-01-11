@@ -1,5 +1,5 @@
-import { ClientConfig } from "../../client/ClientConfig";
-import Retencion from "./Retencion";
+import { ClientConfig } from '../../client/ClientConfig';
+import Retencion from './Retencion';
 export default class RetentionApi {
     private _client;
     /**

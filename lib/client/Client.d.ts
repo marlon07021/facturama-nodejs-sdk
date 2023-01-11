@@ -1,5 +1,5 @@
-import { ClientConfig } from "./ClientConfig";
-import { RequestConfig } from "./RequestConfig";
+import { ClientConfig } from './ClientConfig';
+import { RequestConfig } from './RequestConfig';
 /**
  * Major proxy wrapper for HTTP calls
  */

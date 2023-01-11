@@ -1,5 +1,5 @@
-import { ClientConfig } from "../../client/ClientConfig";
-import { CFDIv4 } from "./CFDI.v4";
+import { ClientConfig } from '../../client/ClientConfig';
+import { CFDIv4 } from './CFDI.v4';
 export default class CFDIApi {
     private _client;
     /**

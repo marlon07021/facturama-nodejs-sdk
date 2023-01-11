@@ -1,4 +1,4 @@
-import { ISerializable } from "../ISerializable";
+import { ISerializable } from '../ISerializable';
 export interface ITimbreFiscalDigital extends ISerializable {
     version: string;
     UUID: string;

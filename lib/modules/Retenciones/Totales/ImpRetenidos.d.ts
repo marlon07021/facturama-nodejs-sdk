@@ -1,4 +1,4 @@
-import { IImpRetenidos } from "../../../abstractions";
+import { IImpRetenidos } from '../../../abstractions';
 export declare class ImpRetenidos implements IImpRetenidos {
     BaseRet: number;
     Impuesto: string;

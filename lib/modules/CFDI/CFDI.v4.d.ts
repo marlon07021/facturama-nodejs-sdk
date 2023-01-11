@@ -1,10 +1,10 @@
 /**
  * CDFI v4
  */
-import Issuer from "./Issuer";
-import Receiver from "./Receiver";
-import Item from "./Item";
-import { ICFDIv4 } from "../../abstractions/cfdi/ICFDI4";
+import Issuer from './Issuer';
+import Receiver from './Receiver';
+import Item from './Item';
+import { ICFDIv4 } from '../../abstractions/cfdi/ICFDI4';
 export declare class CFDIv4 implements ICFDIv4 {
     Serie: string;
     Currency: string;

@@ -1,4 +1,4 @@
-import { ClientConfig } from "../../client/ClientConfig";
+import { ClientConfig } from '../../client/ClientConfig';
 export default class CatalogsApi {
     private _client;
     /**

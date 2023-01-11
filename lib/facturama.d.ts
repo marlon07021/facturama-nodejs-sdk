@@ -1,7 +1,7 @@
-import { CFDIApi } from "./modules/CFDI";
-import { RetentionApi } from "./modules/Retenciones";
-import CSDApi from "./modules/CSD/CSDApi";
-import CatalogsApi from "./modules/Catalog/CatalogsApi";
+import { CFDIApi } from './modules/CFDI';
+import { RetentionApi } from './modules/Retenciones';
+import CSDApi from './modules/CSD/CSDApi';
+import CatalogsApi from './modules/Catalog/CatalogsApi';
 export default class FacturamaSDK {
     private _apiUrl;
     private _CDFI;

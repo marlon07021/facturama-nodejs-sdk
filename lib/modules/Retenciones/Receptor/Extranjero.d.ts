@@ -1,4 +1,4 @@
-import { IExtranjero } from "../../../abstractions/retenciones/IReceptor";
+import { IExtranjero } from '../../../abstractions/retenciones/IReceptor';
 export declare class Extranjero implements IExtranjero {
     NomDenRazSocR: string;
     NumRegIdTrib: string;

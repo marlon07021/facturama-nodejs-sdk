@@ -1,4 +1,4 @@
-import { IComisionDelServicio } from "../../../abstractions";
+import { IComisionDelServicio } from '../../../abstractions';
 export declare class ComisionDelServicio implements IComisionDelServicio {
     Base: number;
     Importe: number;

@@ -1,4 +1,4 @@
-import { INacional } from "../../../abstractions";
+import { INacional } from '../../../abstractions';
 export declare class Nacional implements INacional {
     RfcRecep: string;
     NomDenRazSocR: string;

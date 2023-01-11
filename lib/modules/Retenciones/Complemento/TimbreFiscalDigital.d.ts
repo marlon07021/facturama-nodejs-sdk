@@ -1,4 +1,4 @@
-import { ITimbreFiscalDigital } from "../../../abstractions";
+import { ITimbreFiscalDigital } from '../../../abstractions';
 export declare class TimbreFiscalDigital implements ITimbreFiscalDigital {
     FechaTimbrado: string | Date;
     NoCertificadoSAT: string;

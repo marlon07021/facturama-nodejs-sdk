@@ -1,4 +1,4 @@
-import { ISerializable } from "../ISerializable";
+import { ISerializable } from '../ISerializable';
 export interface IImpRetenidos extends ISerializable {
     BaseRet: number;
     Impuesto: string;

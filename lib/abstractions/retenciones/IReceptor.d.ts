@@ -1,4 +1,4 @@
-import { ISerializable } from "../index";
+import { ISerializable } from '../index';
 export interface INacional extends ISerializable {
     RfcRecep: string;
     NomDenRazSocR: string;

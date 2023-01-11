@@ -1,9 +1,9 @@
-import { IRetencion } from "../../abstractions";
-import { Complemento } from "./Complemento";
-import Emisor from "./Emisor";
-import Periodo from "./Periodo";
-import { Receptor } from "./Receptor";
-import { Totales } from "./Totales";
+import { IRetencion } from '../../abstractions';
+import { Complemento } from './Complemento';
+import Emisor from './Emisor';
+import Periodo from './Periodo';
+import { Receptor } from './Receptor';
+import { Totales } from './Totales';
 export default class Retencion implements IRetencion {
     CadenaOriginal: string;
     Complemento: Complemento;

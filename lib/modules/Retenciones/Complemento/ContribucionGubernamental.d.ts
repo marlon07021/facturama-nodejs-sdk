@@ -1,4 +1,4 @@
-import { IContribucionGubernamental } from "../../../abstractions";
+import { IContribucionGubernamental } from '../../../abstractions';
 export declare class ContribucionGubernamental implements IContribucionGubernamental {
     EntidadDondePagaLaContribucion: string;
     ImpContrib: number;

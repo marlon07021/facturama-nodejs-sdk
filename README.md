@@ -7,6 +7,9 @@ Facturama SDK
 - [X] CFDI v4 Module
 - [ ] CFDI v4 Module Tests
 - [X] CFDI v4 Module Documentation
+- [X] Retenciones Module
+- [X] Retenciones Module Tests
+- [X] Retenciones Module Documentation
 - [X] CSD Module
 - [X] CSD Module Tests
 - [X] CSD Module Documentation

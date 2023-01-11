@@ -1,5 +1,5 @@
-import { ClientConfig } from "../../client/ClientConfig";
-import { ICSD } from "../../abstractions";
+import { ClientConfig } from '../../client/ClientConfig';
+import { ICSD } from '../../abstractions';
 export default class CSDApi {
     private _client;
     /**

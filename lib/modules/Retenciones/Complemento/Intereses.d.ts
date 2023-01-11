@@ -1,4 +1,4 @@
-import { IIntereses } from "../../../abstractions";
+import { IIntereses } from '../../../abstractions';
 export declare class Intereses implements IIntereses {
     MontIntNominal: number;
     MontIntReal: number;

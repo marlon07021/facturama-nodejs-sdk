@@ -1,4 +1,4 @@
-import { HTTP_REQUEST_TYPE } from "./HttpRequestType";
+import { HTTP_REQUEST_TYPE } from './HttpRequestType';
 /**
  * HTTP request configuration
  */
