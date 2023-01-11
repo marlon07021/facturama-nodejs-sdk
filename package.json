@@ -24,6 +24,10 @@
     "nodejs"
   ],
   "author": "Marlon Tornes",
+  "repository": {
+    "url": "https://github.com/marlon07021/facturama-nodejs-sdk",
+    "type": "git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@babel/preset-typescript": "^7.18.6",
