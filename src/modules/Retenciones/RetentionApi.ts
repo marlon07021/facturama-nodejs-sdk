@@ -2,7 +2,7 @@ import { Client } from '../../client/Client';
 import { ClientConfig } from '../../client/ClientConfig';
 import { encodeParams } from '../../util/qs';
 import { HTTP_REQUEST_TYPE } from '../../client/HttpRequestType';
-import Retencion from './Retencion';
+import { Retencion } from './Retencion';
 
 export default class RetentionApi {
   private _client: Client;

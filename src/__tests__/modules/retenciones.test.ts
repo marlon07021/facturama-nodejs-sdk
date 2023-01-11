@@ -1,6 +1,6 @@
 import FacturamaSDK from '../../facturama';
 import axios from 'axios';
-import Retencion from '../../modules/Retenciones/Retencion';
+import {Retencion} from '../../modules/Retenciones';
 
 const sampleRetencion = {
   FolioInt: 'sample string 1',

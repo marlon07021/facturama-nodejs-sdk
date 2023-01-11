@@ -112,3 +112,6 @@ dist
 
 # Local files
 local_tests
+
+# Yes
+package-lock.json

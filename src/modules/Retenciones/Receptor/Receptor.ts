@@ -1,5 +1,6 @@
 import { IReceptor } from '../../../abstractions';
-import { Nacional, Extranjero } from './';
+import { Nacional } from './Nacional';
+import { Extranjero } from './Extranjero';
 
 export class Receptor implements IReceptor {
   Nacional: Nacional;

@@ -1,5 +1,5 @@
 import { IImpRetenidos, ITotales } from '../../../abstractions';
-import { ImpRetenidos } from './';
+import { ImpRetenidos } from './ImpRetenidos';
 
 export class Totales implements ITotales {
   MontoTotGrav: number;

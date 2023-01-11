@@ -1,5 +1,7 @@
 import { IComplemento } from '../../../abstractions';
-import { Intereses, ServiciosPlataformasTecnologicas, TimbreFiscalDigital } from './';
+import { Intereses } from './Intereses';
+import { ServiciosPlataformasTecnologicas } from './ServiciosPlataformasTecnologicas';
+import { TimbreFiscalDigital } from './TimbreFiscalDigital';
 
 export class Complemento implements IComplemento {
   Intereses: Intereses;
