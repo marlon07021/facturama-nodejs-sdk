@@ -50,7 +50,7 @@ export default class CFDIApi {
   public async Create(cfdIv4: CFDIv4): Promise<any> {
     return this._client.request({
       type: HTTP_REQUEST_TYPE.POST,
-      path: `api-lite/2/cfdis`,
+      path: `api-lite/3/cfdis`,
       data: cfdIv4.json(),
     });
   }
