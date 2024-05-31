@@ -97,7 +97,7 @@ export default class CFDIApi {
 
   public async Download(format: string, type: string, id: string): Promise<any> {
     return this._client.request({
-      path: `cfdi/${format}/${type}/${id}`,
+      path: `api/Cfdi/${format}/${type}/${id}`,
     });
   }
 
